@@ -22,6 +22,9 @@
       enable = true;
       userName = "Takamatsu Naoki";
       userEmail = "Takamatsu0331@outlook.jp";
+      extraConfig = {
+        init.defaultBranch = "main";
+      };
     };
 
     gh = {
