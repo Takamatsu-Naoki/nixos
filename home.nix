@@ -157,14 +157,12 @@
     config = {
       modifier = "Mod4";
       terminal = "${pkgs.wezterm}/bin/wezterm";
+      focus.followMouse = "no";
       input = {
         "*" = {
 	        xkb_layout = "us";
 	      };
         "type:touchpad" = {
-          tap = "enabled";
-          dwt = "enabled";
-	        tap_button_map = "lrm";
           scroll_method = "two_finger";
         };
       };
