@@ -12,6 +12,8 @@
     gnome.adwaita-icon-theme
     pamixer
     brightnessctl
+    wezterm
+    firefox
     gimp
     /*blender
     globalprotect-openconnect
@@ -136,14 +138,6 @@
         key_expand = "Control_L-l";
       };
       style = import ./wofi/style.nix;
-    };
-
-    wezterm = {
-      enable = true;
-    };
-
-    firefox = {
-      enable = true;
     };
   };
 
