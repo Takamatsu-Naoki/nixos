@@ -12,7 +12,8 @@
       efi.canTouchEfiVariables = true;
     };
     kernelPackages = pkgs.linuxPackages_latest;
-    initrd.kernelModules = ["amdgpu"];
+    resumeDevice = "/dev/nvme0n1p5";
+    kernelParams = ["resume_offset=46800896"];
   };
 
   networking = {
