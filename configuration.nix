@@ -6,9 +6,13 @@
       ./hardware-configuration.nix
     ];
 
-  boot.loader = {
-    systemd-boot.enable = true;
-    efi.canTouchEfiVariables = true;
+  boot = {
+    loader = {
+      systemd-boot.enable = true;
+      efi.canTouchEfiVariables = true;
+    };
+    kernelPackages = pkgs.linuxPackages_latest;
+    initrd.kernelModules = ["amdgpu"];
   };
 
   networking = {
@@ -17,7 +21,7 @@
   };
 
   powerManagement.enable = true;
-  services.tlp.enable = true;
+  services.auto-cpufreq.enable = true;
   
   time.timeZone = "Asia/Tokyo";
 
