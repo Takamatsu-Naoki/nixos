@@ -75,6 +75,7 @@
 
   security.polkit.enable = true;
   hardware.opengl.enable = true;
+  security.pam.services.swaylock = {};
   services.xserver.desktopManager.runXdgAutostartIfNone = true;
 
   fonts = {

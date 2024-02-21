@@ -5,6 +5,10 @@
 
   home.packages = with pkgs; [
     wl-clipboard
+    gh
+    nil
+    lua-language-server
+    nodePackages_latest.typescript-language-server
     gnome.adwaita-icon-theme
     pamixer
     brightnessctl
@@ -12,9 +16,6 @@
     /*blender
     globalprotect-openconnect
     feh*/
-    nil
-    lua-language-server
-    nodePackages_latest.typescript-language-server
   ];
 
   programs = {
@@ -25,10 +26,6 @@
       extraConfig = {
         init.defaultBranch = "main";
       };
-    };
-
-    gh = {
-      enable = true;
     };
 
     eza = {
@@ -81,6 +78,13 @@
         luasnip
         friendly-snippets
       ];
+    };
+
+    swaylock = {
+      enable = true;
+      settings = {
+        color = "222222";
+      };
     };
 
     waybar = {
