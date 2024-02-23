@@ -9,9 +9,11 @@
     nil
     lua-language-server
     nodePackages_latest.typescript-language-server
+    dracula-theme
     gnome.adwaita-icon-theme
     pamixer
     brightnessctl
+    swayidle
     wezterm
     firefox
     thunderbird
@@ -201,6 +203,34 @@
       bars = [{
         command = "${pkgs.waybar}/bin/waybar";
       }];
+      startup = [
+        {
+          command = ''
+            swayidle -w \
+            timeout 300 "systemctl suspend" \
+            timeout 600 "systemctl hibernate" \
+            before-sleep "${pkgs.swaylock}/bin/swaylock -fF"
+          '';
+          always = true;
+        }
+      ];
     };
+  };
+
+  services.mako = {
+    enable = true;
+    backgroundColor = "#282a36";
+    textColor = "#f8f8f2";
+    borderColor = "#44475a";
+    extraConfig = ''
+      [urgency=low]
+      border-color=#282a36
+
+      [urgency=normal]
+      border-color=#44475a
+
+      [urgency=high]
+      border-color=#ff5555
+    '';
   };
 }
