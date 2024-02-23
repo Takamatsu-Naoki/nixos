@@ -14,10 +14,12 @@
     brightnessctl
     wezterm
     firefox
+    thunderbird
+    rclone
+    feh
+    vlc
+    inkscape
     gimp
-    /*blender
-    globalprotect-openconnect
-    feh*/
   ];
 
   programs = {
@@ -136,9 +138,26 @@
         key_pgup = "Control_L-u";
         key_pgdn = "Control_L-d";
         key_expand = "Control_L-l";
+        key_forward = "Control_L-j";
+        key_backward = "Control_L-k";
       };
       style = import ./wofi/style.nix;
     };
+
+    ncmpcpp = {
+      enable = true;
+    };
+  };
+
+  services.mpd = {
+    enable = true;
+    musicDirectory = "~/Music";
+    extraConfig = ''
+      audio_output {
+        type "pipewire"
+        name "My PipeWire Output"
+      }
+    ''; 
   };
 
   i18n.inputMethod = {
