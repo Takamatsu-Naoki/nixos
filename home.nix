@@ -18,6 +18,7 @@
     firefox
     thunderbird
     rclone
+    jmtpfs
     feh
     vlc
     inkscape
