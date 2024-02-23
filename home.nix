@@ -139,13 +139,11 @@
       settings = {
         show = "drun";
         insensitive = true;
-        key_left = "Control_L-h";
-        key_down = "Control_L-j";
-        key_up = "Control_L-k";
-        key_right = "Control_L-l";
+        key_down = "Tab";
+        key_up = "ISO_Left_Tab";
         key_pgup = "Control_L-u";
         key_pgdn = "Control_L-d";
-        key_expand = "Control_L-l";
+        key_expand = "space";
         key_forward = "Control_L-j";
         key_backward = "Control_L-k";
       };
