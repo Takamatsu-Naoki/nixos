@@ -48,6 +48,7 @@
       enable = true;
       interactiveShellInit = ''
         set fish_greeting
+        direnv hook fish | source
       '';
       plugins = [
         { name = "bobthefisher"; src = pkgs.fishPlugins.bobthefisher.src; }
@@ -82,6 +83,11 @@
         luasnip
         friendly-snippets
       ];
+    };
+
+    direnv = {
+      enable = true;
+      nix-direnv.enable = true;
     };
 
     swaylock = {
