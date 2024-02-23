@@ -177,7 +177,6 @@
     enable = true;
     config = {
       modifier = "Mod4";
-      terminal = "${pkgs.wezterm}/bin/wezterm";
       focus.followMouse = "no";
       input = {
         "*" = {
@@ -193,12 +192,13 @@
         };
       };
       keybindings = lib.mkOptionDefault {
-        "Mod4+slash" = "exec wofi";
-        "XF86AudioMute" = "exec pamixer -t";
-        "XF86AudioRaiseVolume" = "exec pamixer -i 5";
-        "XF86AudioLowerVolume" = "exec pamixer -d 5";
-        "XF86MonBrightnessUp" = "exec brightnessctl set 10%+";
-        "XF86MonBrightnessDown" = "exec brightnessctl set 10%-";
+        "Mod4+slash" = "exec ${pkgs.wezterm}/bin/wezterm";
+        "Mod4+Return" = "exec ${pkgs.wofi}/bin/wofi";
+        "XF86AudioMute" = "exec ${pkgs.pamixer}/bin/pamixer -t";
+        "XF86AudioRaiseVolume" = "exec ${pkgs.pamixer}/bin/pamixer -i 5";
+        "XF86AudioLowerVolume" = "exec ${pkgs.pamixer}/bin/pamixer -d 5";
+        "XF86MonBrightnessUp" = "exec ${pkgs.brightnessctl}/bin/brightnessctl set 10%+";
+        "XF86MonBrightnessDown" = "exec ${pkgs.brightnessctl}/bin/brightnessctl set 10%-";
       };
       bars = [{
         command = "${pkgs.waybar}/bin/waybar";
