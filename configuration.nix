@@ -35,6 +35,7 @@
       };
     };
   };
+  services.upower.enable = true;
   
   time.timeZone = "Asia/Tokyo";
 
