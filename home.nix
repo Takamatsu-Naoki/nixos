@@ -1,7 +1,7 @@
 { pkgs, lib, ... }: {
   home.username = "naoki";
   home.homeDirectory = "/home/naoki";
-  home.stateVersion = "23.11";
+  home.stateVersion = "24.05";
 
   home.sessionPath = ["$HOME/dev/nixos/scripts"];
 
