@@ -93,6 +93,11 @@
   hardware.opengl.enable = true;
   security.pam.services.swaylock = {};
 
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+  };
+
   fonts = {
     packages = with pkgs; [
       noto-fonts-cjk-serif
