@@ -113,20 +113,29 @@
         "sway/scratchpad" = {
           format = "[ {count} ]";
         };
+        "sway/workspaces" = {
+          format = "{icon}: {value}";
+          format-icons = {
+            "1" = " ";
+            "2" = "󰈹 ";
+            "3" = "󱀣 ";
+            "4" = " ";
+          };
+        };
         pulseaudio = {
           format-muted = "[{volume}%] 󰝟 ";
-          format = "[{volume}%] {icon} ";
+          format = "[{volume}%] {icon}";
           format-icons = {
-            default = ["󰕿" "󰖀" "󰕾"];
+            default = ["󰕿 " "󰖀 " "󰕾 "];
           };
         };
         backlight = {
-          format = "[{percent}%] {icon} ";
-          format-icons = ["󱩎" "󱩏" "󱩐" "󱩑" "󱩓" "󱩓" "󱩔" "󱩕" "󱩖" "󰛨"];
+          format = "[{percent}%] {icon}";
+          format-icons = ["󱩎 " "󱩏 " "󱩐 " "󱩑 " "󱩓 " "󱩓 " "󱩔 " "󱩕 " "󱩖 " "󰛨 "];
         };
         battery = {
-          format = "[{capacity}%] {icon} ";
-          format-icons = ["󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹"];
+          format = "[{capacity}%] {icon}";
+          format-icons = ["󰁺 " "󰁻 " "󰁼 " "󰁽 " "󰁾 " "󰁿 " "󰂀 " "󰂁 " "󰂂 " "󰁹 "];
         };
         clock = {
           format = "[{:%c}]";
@@ -165,11 +174,6 @@
         name "My PipeWire Output"
       }
     ''; 
-  };
-
-  i18n.inputMethod = {
-    enabled = "fcitx5";
-    fcitx5.addons = with pkgs; [ fcitx5-mozc ];
   };
 
   wayland.windowManager.sway = {

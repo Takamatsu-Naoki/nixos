@@ -39,11 +39,20 @@
   
   time.timeZone = "Asia/Tokyo";
 
-  i18n.defaultLocale = "en_US.UTF-8";
   console = {
     font = "Lat2-Terminus16";
     keyMap = "us"; 
   };
+
+  i18n = {
+    defaultLocale = "en_US.UTF-8";
+    inputMethod = {
+      enabled = "fcitx5";
+      fcitx5.addons = with pkgs; [ fcitx5-mozc ];
+    };
+  };
+
+  services.xserver.desktopManager.runXdgAutostartIfNone = true;
 
   services.keyd = {
     enable = true;
@@ -89,7 +98,6 @@
   security.polkit.enable = true;
   hardware.opengl.enable = true;
   security.pam.services.swaylock = {};
-  services.xserver.desktopManager.runXdgAutostartIfNone = true;
 
   fonts = {
     packages = with pkgs; [
