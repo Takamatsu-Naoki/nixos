@@ -3,6 +3,8 @@
   home.homeDirectory = "/home/naoki";
   home.stateVersion = "23.11";
 
+  home.sessionPath = ["$HOME/dev/nixos/scripts"];
+
   home.packages = with pkgs; [
     wl-clipboard
     gh
@@ -15,6 +17,7 @@
     brightnessctl
     swayidle
     wezterm
+    dmenu-wayland
     firefox
     thunderbird
     rclone
@@ -144,22 +147,6 @@
       style = import ./waybar/style.nix;
     };
 
-    wofi = {
-      enable = true;
-      settings = {
-        show = "drun";
-        insensitive = true;
-        key_down = "Tab";
-        key_up = "ISO_Left_Tab";
-        key_pgup = "Control_L-u";
-        key_pgdn = "Control_L-d";
-        key_expand = "space";
-        key_forward = "Control_L-j";
-        key_backward = "Control_L-k";
-      };
-      style = import ./wofi/style.nix;
-    };
-
     ncmpcpp = {
       enable = true;
     };
@@ -186,7 +173,7 @@
       keybindings = lib.mkOptionDefault {
         "Mod4+q" = "kill";
         "Mod4+slash" = "exec ${pkgs.wezterm}/bin/wezterm";
-        "Mod4+Return" = "exec ${pkgs.wofi}/bin/wofi";
+        "Mod4+Return" = "exec ${pkgs.dmenu-wayland}/bin/dmenu-wl_run";
         "XF86AudioMute" = "exec ${pkgs.pamixer}/bin/pamixer -t";
         "XF86AudioRaiseVolume" = "exec ${pkgs.pamixer}/bin/pamixer -i 5";
         "XF86AudioLowerVolume" = "exec ${pkgs.pamixer}/bin/pamixer -d 5";
