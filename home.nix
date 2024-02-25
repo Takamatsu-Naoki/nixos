@@ -191,6 +191,7 @@
         };
       };
       keybindings = lib.mkOptionDefault {
+        "Mod4+q" = "kill";
         "Mod4+slash" = "exec ${pkgs.wezterm}/bin/wezterm";
         "Mod4+Return" = "exec ${pkgs.wofi}/bin/wofi";
         "XF86AudioMute" = "exec ${pkgs.pamixer}/bin/pamixer -t";
