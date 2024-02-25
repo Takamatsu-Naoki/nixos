@@ -1,7 +1,7 @@
 { pkgs, lib, ... }: {
   home.username = "naoki";
   home.homeDirectory = "/home/naoki";
-  home.stateVersion = "24.05";
+  home.stateVersion = "23.11";
 
   home.packages = with pkgs; [
     wl-clipboard
@@ -165,17 +165,6 @@
     };
   };
 
-  services.mpd = {
-    enable = true;
-    musicDirectory = "~/Music";
-    extraConfig = ''
-      audio_output {
-        type "pipewire"
-        name "My PipeWire Output"
-      }
-    ''; 
-  };
-
   wayland.windowManager.sway = {
     enable = true;
     config = {
@@ -236,5 +225,21 @@
       [urgency=high]
       border-color=#ff5555
     '';
+  };
+
+  services.mpd = {
+    enable = true;
+    musicDirectory = "~/Music";
+    extraConfig = ''
+      audio_output {
+        type "pipewire"
+        name "My PipeWire Output"
+      }
+    ''; 
+  };
+
+  i18n.inputMethod = {
+    enabled = "fcitx5";
+    fcitx5.addons = with pkgs; [ fcitx5-mozc ];
   };
 }

@@ -44,13 +44,7 @@
     keyMap = "us"; 
   };
 
-  i18n = {
-    defaultLocale = "en_US.UTF-8";
-    inputMethod = {
-      enabled = "fcitx5";
-      fcitx5.addons = with pkgs; [ fcitx5-mozc ];
-    };
-  };
+  i18n.defaultLocale = "en_US.UTF-8";
 
   services.xserver.desktopManager.runXdgAutostartIfNone = true;
 
