@@ -195,6 +195,7 @@
         }
       ];
     };
+    extraConfig = "workspace number 1";
   };
 
   services.mako = {
