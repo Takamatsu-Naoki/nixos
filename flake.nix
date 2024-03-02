@@ -11,15 +11,15 @@
     nixosConfigurations = {
       "TallOaks" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-	modules = [
+        modules = [
           ./configuration.nix
-	  home-manager.nixosModules.home-manager
-	  {
-	    home-manager.useGlobalPkgs = true;
-	    home-manager.useUserPackages = true;
-	    home-manager.users.naoki = import ./home.nix;
-	  }
-	];
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.naoki = import ./home.nix;
+          }
+        ];
       };
     };
   };
