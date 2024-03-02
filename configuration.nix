@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
   imports =
@@ -105,7 +105,20 @@
       noto-fonts-emoji
       nerdfonts
       powerline-fonts
-    ];
+    ] ++ ( with inputs.nixos-fonts.packages.x86_64-linux; [
+      anzu-moji
+      asobifont
+      azukifont
+      honyaji-re
+      huifont
+      mitimasu
+      nagayama-kai
+      rii-tegaki-fude
+      rii-tegaki-n
+      shigotofont
+      tanuki-magic
+      uzurafont
+    ]);
     fontDir.enable = true;
     fontconfig = {
       defaultFonts = {
