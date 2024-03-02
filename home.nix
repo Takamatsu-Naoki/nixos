@@ -8,6 +8,7 @@
   home.packages = with pkgs; [
     wl-clipboard
     gh
+    p7zip
     nil
     lua-language-server
     nodePackages_latest.typescript-language-server
