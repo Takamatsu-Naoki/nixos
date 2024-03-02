@@ -3,7 +3,7 @@
   home.homeDirectory = "/home/naoki";
   home.stateVersion = "24.05";
 
-  home.sessionPath = ["$HOME/dev/nixos/scripts"];
+  home.sessionPath = ["$HOME/dev/nixos/my-scripts"];
 
   home.packages = with pkgs; [
     wl-clipboard
