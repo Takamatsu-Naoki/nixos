@@ -28,8 +28,8 @@
         ]
       },
       "locked": {
-        "lastModified": 1709407321,
-        "narHash": "sha256-XCiQ7GvJd82dyeK/GfKK425a+u7bOlM1BzXR3UfBecw=",
+        "lastModified": 1709622593,
+        "narHash": "sha256-7qaOHrWDQto3vUzP+qDq1cwht5FAibnJEBoClLLZfGk=",
         "path": "/home/naoki/dev/nixos-fonts",
         "type": "path"
       },

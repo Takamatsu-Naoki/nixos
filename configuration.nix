@@ -103,29 +103,20 @@
       noto-fonts-cjk-serif
       noto-fonts-cjk-sans
       noto-fonts-emoji
-      nerdfonts
-      powerline-fonts
+      (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     ] ++ ( with inputs.nixos-fonts.packages.x86_64-linux; [
       anzu-moji
-      asobifont
       azukifont
-      honyaji-re
-      huifont
-      mitimasu
-      nagayama-kai
       rii-tegaki-fude
       rii-tegaki-n
-      shigotofont
-      tanuki-magic
-      uzurafont
     ]);
-    fontDir.enable = true;
     fontconfig = {
+      enable = true;
       defaultFonts = {
-        serif = ["Noto Serif CJK JP" "Noto Color Emoji"];
-      	sansSerif = ["Noto Sans CJK JP" "Noto Color Emoji"];
-      	monospace = ["JetBrainsMono Nerd Font"  "Noto Color Emoji"];
+        serif = ["Noto Serif CJK JP"];
+      	sansSerif = ["Noto Sans CJK JP"];
       	emoji = ["Noto Color Emoji"];
+      	monospace = ["JetBrainsMono Nerd Font"];
       };
     };
   };
