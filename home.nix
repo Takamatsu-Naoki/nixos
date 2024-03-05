@@ -174,6 +174,7 @@
       };
       keybindings = lib.mkOptionDefault {
         "Mod4+q" = "kill";
+        "Mod4+d" = "exec ${pkgs.mako}/bin/makoctl dismiss -a";
         "Mod4+slash" = "exec ${pkgs.wezterm}/bin/wezterm";
         "Mod4+Return" = "exec ${pkgs.dmenu-wayland}/bin/dmenu-wl_run";
         "XF86AudioMute" = "exec ${pkgs.pamixer}/bin/pamixer -t";
