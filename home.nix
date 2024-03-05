@@ -125,6 +125,7 @@
             "3" = "󱀣 ";
             "4" = " ";
             "5" = "󱇣 ";
+            "10" = "󰍹 ";
           };
         };
         pulseaudio = {
@@ -172,6 +173,12 @@
           hide_cursor = "3000";
         };
       };
+      workspaceOutputAssign = [
+        {
+          workspace = "10";
+          output = "HDMI-A-1";
+        }
+      ];
       keybindings = lib.mkOptionDefault {
         "Mod4+q" = "kill";
         "Mod4+d" = "exec ${pkgs.mako}/bin/makoctl dismiss -a";
