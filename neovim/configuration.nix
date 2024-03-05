@@ -8,6 +8,7 @@ local options = {
   clipboard = 'unnamedplus',
   title = true,
   number = true,
+  splitright = true,
   showmatch = true,
   ignorecase = true,
   smartcase = true,
@@ -52,8 +53,7 @@ autocmd('TermOpen', {
   command = 'setlocal nonumber'
 })
 
-keymap('n', 'tt', '<cmd>terminal<CR>')
-keymap('n', 'tx', '<cmd>belowright new<CR><cmd>terminal<CR>')
+keymap('n', 'tt', '<cmd>vnew<CR><cmd>terminal<CR>')
 keymap('n', '<Esc><Esc>', '<cmd>nohlsearch<CR>')
 keymap('t', '<Esc><Esc>', '<C-\\><C-n>')
 
