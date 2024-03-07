@@ -214,6 +214,7 @@
     backgroundColor = "#282a36";
     textColor = "#f8f8f2";
     borderColor = "#44475a";
+    font = "Noto Sans CJK JP";
     extraConfig = ''
       [urgency=low]
       border-color=#282a36
