@@ -17,7 +17,6 @@
     pamixer
     brightnessctl
     swayidle
-    wezterm
     dmenu-wayland
     firefox
     thunderbird
@@ -153,6 +152,19 @@
 
     ncmpcpp = {
       enable = true;
+    };
+
+    wezterm = {
+      enable = true;
+      extraConfig = ''
+        local wezterm = require "wezterm"
+        local config = wezterm.config_builder()
+        config.font = wezterm.font_with_fallback {
+          "JetBrainsMono Nerd Font",
+          "Noto Sans CJK JP",
+        } 
+        return config
+      '';
     };
   };
 
