@@ -80,6 +80,7 @@
       plugins = with pkgs.vimPlugins; [
         oil-nvim
         kanagawa-nvim
+        none-ls-nvim
         nvim-lspconfig
         nvim-cmp
         cmp-buffer
