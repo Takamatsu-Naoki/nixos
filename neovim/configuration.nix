@@ -65,11 +65,22 @@ require('oil').setup({
 
 vim.cmd("colorscheme kanagawa")
 
+local null_ls = require("null-ls")
+
+null_ls.setup({
+  sources = {
+    null_ls.builtins.formatting.prettier,
+  },
+})
+
+keymap('n', '<leader>f', function() vim.lsp.buf.format { async = true } end)
+
 local lspconfig = require('lspconfig')
 
 lspconfig.nil_ls.setup({})
 lspconfig.lua_ls.setup({})
 lspconfig.tsserver.setup({})
+lspconfig.eslint.setup({})
 
 vim.api.nvim_create_autocmd('LspAttach', {
   desc = 'LSP actions',

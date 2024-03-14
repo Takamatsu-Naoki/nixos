@@ -11,7 +11,6 @@
     p7zip
     nil
     lua-language-server
-    nodePackages_latest.typescript-language-server
     dracula-theme
     gnome.adwaita-icon-theme
     pamixer
