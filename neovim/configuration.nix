@@ -79,8 +79,12 @@ local lspconfig = require('lspconfig')
 
 lspconfig.nil_ls.setup({})
 lspconfig.lua_ls.setup({})
-lspconfig.tsserver.setup({})
-lspconfig.eslint.setup({})
+lspconfig.tsserver.setup({
+  cmd = { "npx", "typescript-language-server", "--stdio" },
+})
+lspconfig.eslint.setup({
+  cmd = { "npx", "vscode-eslint-language-server", "--stdio" },
+})
 
 vim.api.nvim_create_autocmd('LspAttach', {
   desc = 'LSP actions',
