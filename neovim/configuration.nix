@@ -78,12 +78,14 @@ keymap('n', '<leader>f', function() vim.lsp.buf.format { async = true } end)
 local lspconfig = require('lspconfig')
 
 lspconfig.nil_ls.setup({})
-lspconfig.lua_ls.setup({})
 lspconfig.tsserver.setup({
   cmd = { "npx", "typescript-language-server", "--stdio" },
 })
 lspconfig.eslint.setup({
   cmd = { "npx", "vscode-eslint-language-server", "--stdio" },
+})
+lspconfig.svelte.setup({
+  cmd = { "npx", "svelteserver", "--stdio" },
 })
 
 vim.api.nvim_create_autocmd('LspAttach', {
