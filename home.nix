@@ -10,7 +10,6 @@
     gh
     p7zip
     nil
-    lua-language-server
     dracula-theme
     gnome.adwaita-icon-theme
     pamixer
