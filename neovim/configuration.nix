@@ -63,6 +63,12 @@ require('oil').setup({
   delete_to_trash = true,
 })
 
+require('nvim-treesitter.configs').setup({
+  highlight = {
+    enable = true,
+  },
+})
+
 vim.cmd("colorscheme kanagawa")
 
 local null_ls = require("null-ls")
