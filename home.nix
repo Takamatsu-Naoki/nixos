@@ -1,7 +1,7 @@
 { pkgs, lib, ... }: {
   home.username = "naoki";
   home.homeDirectory = "/home/naoki";
-  home.stateVersion = "24.05";
+  home.stateVersion = "23.11";
 
   home.sessionPath = ["$HOME/dev/nixos/my-scripts"];
 
@@ -37,6 +37,7 @@
 
     eza = {
       enable = true;
+      enableAliases = true;
       git = true;
       icons = true;
     };
@@ -108,7 +109,7 @@
         color = "222222";
       };
     };
-/*
+
     waybar = {
       enable = true;
       settings = [{
@@ -155,7 +156,7 @@
       }];
       style = import ./waybar/style.nix;
     };
-*/
+
     ncmpcpp = {
       enable = true;
     };
