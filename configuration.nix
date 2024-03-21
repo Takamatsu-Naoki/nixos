@@ -109,6 +109,7 @@
       azukifont
       rii-tegaki-fude
       rii-tegaki-n
+      coming-soon
     ]);
     fontconfig = {
       enable = true;

@@ -12,7 +12,6 @@
     nil
     dracula-theme
     gnome.adwaita-icon-theme
-    pamixer
     brightnessctl
     swayidle
     dmenu-wayland
@@ -38,7 +37,6 @@
 
     eza = {
       enable = true;
-      enableAliases = true;
       git = true;
       icons = true;
     };
@@ -110,7 +108,7 @@
         color = "222222";
       };
     };
-
+/*
     waybar = {
       enable = true;
       settings = [{
@@ -157,7 +155,7 @@
       }];
       style = import ./waybar/style.nix;
     };
-
+*/
     ncmpcpp = {
       enable = true;
     };
