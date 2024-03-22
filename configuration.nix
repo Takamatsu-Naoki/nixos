@@ -17,6 +17,12 @@
     initrd.kernelModules = [ "amdgpu" ];
   };
 
+  fileSystems."/home/naoki/mnt/sda1" = {
+   device = "/dev/sda1";
+   fsType = "auto";
+   options = [ "defaults" "user" "rw" "utf8" "noauto" "umask=000" ];
+ };
+
   networking = {
     hostName = "TallOaks";
     networkmanager.enable = true; 
