@@ -14,6 +14,7 @@
     kernelPackages = pkgs.linuxPackages_latest;
     resumeDevice = "/dev/nvme0n1p5";
     kernelParams = ["resume_offset=46800896"];
+    initrd.kernelModules = [ "amdgpu" ];
   };
 
   networking = {
