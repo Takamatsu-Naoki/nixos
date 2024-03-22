@@ -47,8 +47,6 @@
 
   i18n.defaultLocale = "en_US.UTF-8";
 
-  services.xserver.desktopManager.runXdgAutostartIfNone = true;
-
   services.keyd = {
     enable = true;
     keyboards.default = {
