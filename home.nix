@@ -244,6 +244,9 @@
 
       [urgency=high]
       border-color=#ff5555
+
+      [summary="Font problem"]
+      invisible=1
     '';
   };
 
