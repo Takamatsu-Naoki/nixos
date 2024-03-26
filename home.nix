@@ -7,6 +7,7 @@
 
   home.packages = with pkgs; [
     wl-clipboard
+    git-lfs
     gh
     p7zip
     nil
