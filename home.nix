@@ -5,8 +5,14 @@
 
   home.sessionPath = ["$HOME/dev/nixos/my-scripts"];
 
+  home.sessionVariables = {
+    GRIM_DEFAULT_DIR = "$HOME/pics/ss";
+  };
+
   home.packages = with pkgs; [
     wl-clipboard
+    grim
+    slurp
     git-lfs
     gh
     p7zip
@@ -204,6 +210,8 @@
       keybindings = lib.mkOptionDefault {
         "Mod4+q" = "kill";
         "Mod4+d" = "exec ${pkgs.mako}/bin/makoctl dismiss -a";
+        "Mod4+g" = "exec ${pkgs.grim}/bin/grim";
+        "Mod4+Shift+g" = "exec ${pkgs.slurp}/bin/slurp | ${pkgs.grim}/bin/grim -g -";
         "Mod4+slash" = "exec ${pkgs.wezterm}/bin/wezterm";
         "Mod4+Return" = "exec ${pkgs.dmenu-wayland}/bin/dmenu-wl_run";
         "XF86AudioMute" = "exec ${pkgs.pamixer}/bin/pamixer -t";
