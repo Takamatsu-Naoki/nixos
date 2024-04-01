@@ -3,7 +3,10 @@
   home.homeDirectory = "/home/naoki";
   home.stateVersion = "23.11";
 
-  home.sessionPath = ["$HOME/dev/nixos/my-scripts"];
+  home.sessionPath = [
+    "$HOME/dev/nixos/my-scripts"
+    "${pkgs.fcitx5-mozc}/lib/mozc"
+  ];
 
   home.sessionVariables = {
     GRIM_DEFAULT_DIR = "$HOME/pics/ss";
