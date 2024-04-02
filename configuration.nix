@@ -105,9 +105,7 @@
 
   fonts = {
     packages = with pkgs; [
-      noto-fonts-cjk-serif
-      noto-fonts-cjk-sans
-      noto-fonts-emoji
+      noto-fonts
       (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     ] ++ ( with inputs.nixos-fonts.packages.x86_64-linux; [
       anzu-moji
