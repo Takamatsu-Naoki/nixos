@@ -13,6 +13,7 @@
   };
 
   home.packages = with pkgs; [
+    openconnect
     wl-clipboard
     grim
     slurp
