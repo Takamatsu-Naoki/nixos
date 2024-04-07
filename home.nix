@@ -9,7 +9,7 @@
   ];
 
   home.sessionVariables = {
-    GRIM_DEFAULT_DIR = "$HOME/pics/ss";
+    GRIM_DEFAULT_DIR = "$HOME/gdrive/pics/ss";
   };
 
   home.packages = with pkgs; [
