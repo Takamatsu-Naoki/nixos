@@ -84,6 +84,11 @@ keymap('n', '<leader>f', function() vim.lsp.buf.format { async = true } end)
 local lspconfig = require('lspconfig')
 
 lspconfig.nil_ls.setup({})
+lspconfig.rust_analyzer.setup({
+  settings = {
+    ['rust-analyzer'] = {},
+  },
+})
 lspconfig.tsserver.setup({
   cmd = { "npx", "typescript-language-server", "--stdio" },
 })

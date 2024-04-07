@@ -88,6 +88,7 @@
       plugins = with pkgs.vimPlugins; [
         (nvim-treesitter.withPlugins (p: with p; [
           nix
+          rust
           html
           css
           json
