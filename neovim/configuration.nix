@@ -33,16 +33,6 @@ end
 
 vim.g.mapleader = ','
 
-autocmd('FileType', {
-  pattern = 'html',
-  command = 'setlocal sw=2 ts=2 sts=2'
-})
-
-autocmd('FileType', {
-  pattern = 'js',
-  command = 'setlocal sw=2 ts=2 sts=2'
-})
-
 autocmd('TermOpen', {
   pattern = '*',
   command = 'startinsert'
