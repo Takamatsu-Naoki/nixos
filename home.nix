@@ -243,7 +243,7 @@
           command = ''
             swayidle -w \
             timeout 300 "${pkgs.swaylock}/bin/swaylock -fF" \
-            timeout 420 "systemctl hibernate" \
+            timeout 480 "systemctl hibernate" \
             before-sleep "${pkgs.swaylock}/bin/swaylock -fF"
           '';
           always = true;
