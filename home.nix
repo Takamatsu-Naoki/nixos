@@ -223,6 +223,8 @@
         }
       ];
       keybindings = lib.mkOptionDefault {
+        "Mod4+0" = "workspace number 10";
+        "Mod4+Shift+0" = "move container to workspace number 10";
         "Mod4+q" = "kill";
         "Mod4+d" = "exec ${pkgs.mako}/bin/makoctl dismiss -a";
         "Mod4+g" = "exec ${pkgs.grim}/bin/grim";
