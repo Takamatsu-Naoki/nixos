@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+{ inputs, lib, pkgs, ... }:
 
 {
   imports =
@@ -85,6 +85,11 @@
     extraGroups = ["wheel"];
     shell = pkgs.fish;
   };
+
+  nixpkgs.config.allowUnfreePredicate = pkg:
+    builtins.elem (lib.getName pkg) [
+      "google-chrome"
+    ];
 
   security.rtkit.enable = true;
   services.pipewire = {

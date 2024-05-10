@@ -26,7 +26,7 @@
     brightnessctl
     swayidle
     dmenu-wayland
-    firefox
+    google-chrome
     thunderbird
     rclone
     jmtpfs
