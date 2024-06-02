@@ -30,7 +30,7 @@
     thunderbird
     rclone
     jmtpfs
-    feh
+    qview
     vlc
     inkscape
     gimp
