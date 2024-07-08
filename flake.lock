@@ -28,14 +28,17 @@
         ]
       },
       "locked": {
-        "lastModified": 1720413247,
-        "narHash": "sha256-M7kEpS8soEhggIJs1QZMtFBtG87AgzuJDDsoDUI4oUA=",
-        "path": "/home/naoki/dev/nixos-fonts",
-        "type": "path"
+        "lastModified": 1720413855,
+        "narHash": "sha256-7zHGta1aLKfD64xSOT81MX35WveXL8IKYd+UknoTRN4=",
+        "owner": "Takamatsu-Naoki",
+        "repo": "nixos-fonts",
+        "rev": "fd68584310f2538c1fb3fc0d3eed8f41daeaceaf",
+        "type": "github"
       },
       "original": {
-        "path": "/home/naoki/dev/nixos-fonts",
-        "type": "path"
+        "owner": "Takamatsu-Naoki",
+        "repo": "nixos-fonts",
+        "type": "github"
       }
     },
     "nixpkgs": {
