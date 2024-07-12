@@ -103,6 +103,12 @@
   hardware.opengl.enable = true;
   security.pam.services.swaylock = {};
 
+  xdg.portal = {
+    enable = true;
+    wlr.enable = true;
+    config.common.default = "*";
+  };
+
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;

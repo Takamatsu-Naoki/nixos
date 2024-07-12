@@ -34,6 +34,7 @@
     vlc
     inkscape
     gimp
+    obs-studio
   ];
 
   programs = {
