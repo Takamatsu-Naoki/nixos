@@ -24,7 +24,6 @@
     dracula-theme
     gnome.adwaita-icon-theme
     brightnessctl
-    swayidle
     dmenu-wayland
     google-chrome
     thunderbird
@@ -241,19 +240,36 @@
       bars = [{
         command = "${pkgs.waybar}/bin/waybar";
       }];
-      startup = [
+      window.commands = [
         {
-          command = ''
-            swayidle -w \
-            timeout 300 "${pkgs.swaylock}/bin/swaylock -fF" \
-            timeout 480 "systemctl hibernate" \
-            before-sleep "${pkgs.swaylock}/bin/swaylock -fF"
-          '';
-          always = true;
+          command = "inhibit_idle fullscreen";
+          criteria = {
+            shell = ".*";
+          };
         }
       ];
     };
     extraConfig = "workspace number 1";
+  };
+
+  services.swayidle = {
+    enable = true;
+    events = [
+      {
+        event = "before-sleep";
+        command = "${pkgs.swaylock}/bin/swaylock -fF";
+      }
+    ];
+    timeouts = [
+      {
+        timeout = 300;
+        command = "${pkgs.swaylock}/bin/swaylock -fF";
+      }
+      {
+        timeout = 480;
+        command =  "systemctl hibernate";
+      }
+    ];
   };
 
   services.mako = {
