@@ -25,6 +25,7 @@
     adwaita-icon-theme
     brightnessctl
     dmenu-wayland
+    kitty
     google-chrome
     thunderbird
     rclone
@@ -182,19 +183,6 @@
     ncmpcpp = {
       enable = true;
     };
-
-    wezterm = {
-      enable = true;
-      extraConfig = ''
-        local wezterm = require "wezterm"
-        local config = wezterm.config_builder()
-        config.font = wezterm.font_with_fallback {
-          "JetBrainsMono Nerd Font",
-          "Noto Sans CJK JP",
-        } 
-        return config
-      '';
-    };
   };
 
   wayland.windowManager.sway = {
@@ -228,7 +216,7 @@
         "Mod4+d" = "exec ${pkgs.mako}/bin/makoctl dismiss -a";
         "Mod4+g" = "exec ${pkgs.grim}/bin/grim";
         "Mod4+Shift+g" = "exec ${pkgs.slurp}/bin/slurp | ${pkgs.grim}/bin/grim -g -";
-        "Mod4+slash" = "exec ${pkgs.wezterm}/bin/wezterm";
+        "Mod4+slash" = "exec ${pkgs.kitty}/bin/kitty";
         "Mod4+Return" = "exec ${pkgs.dmenu-wayland}/bin/dmenu-wl_run";
         "XF86AudioMute" = "exec ${pkgs.pamixer}/bin/pamixer -t";
         "XF86AudioRaiseVolume" = "exec ${pkgs.pamixer}/bin/pamixer -i 5";
