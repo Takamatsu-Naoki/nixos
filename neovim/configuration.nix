@@ -79,7 +79,7 @@ lspconfig.rust_analyzer.setup({
     ['rust-analyzer'] = {},
   },
 })
-lspconfig.tsserver.setup({
+lspconfig.ts_ls.setup({
   cmd = { "npx", "typescript-language-server", "--stdio" },
 })
 lspconfig.eslint.setup({
