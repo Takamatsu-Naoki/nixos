@@ -22,7 +22,7 @@
     p7zip
     nil
     dracula-theme
-    gnome.adwaita-icon-theme
+    adwaita-icon-theme
     brightnessctl
     dmenu-wayland
     google-chrome
@@ -48,7 +48,6 @@
 
     eza = {
       enable = true;
-      enableAliases = true;
       git = true;
       icons = true;
     };

@@ -100,7 +100,7 @@
   };
 
   security.polkit.enable = true;
-  hardware.opengl.enable = true;
+  hardware.graphics.enable = true;
   security.pam.services.swaylock = {};
 
   xdg.portal = {
