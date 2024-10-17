@@ -35,6 +35,7 @@
     inkscape
     gimp
     obs-studio
+    angband
   ];
 
   programs = {
