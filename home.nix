@@ -36,6 +36,7 @@
     gimp
     obs-studio
     angband
+    ninvaders
   ];
 
   programs = {
