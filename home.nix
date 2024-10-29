@@ -199,6 +199,7 @@
 	      };
         "type:touchpad" = {
           scroll_method = "two_finger";
+          tap = "enabled";
         };
       };
       seat = {
