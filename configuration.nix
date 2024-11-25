@@ -78,7 +78,15 @@
     experimental-features = ["nix-command" "flakes"];
   };
 
-  programs.fish.enable = true;
+  programs = {
+    fish = {
+      enable = true;
+    };
+
+    steam = {
+      enable = true;
+    };
+  };
 
   users.users.naoki = {
     isNormalUser = true;
@@ -89,6 +97,10 @@
   nixpkgs.config.allowUnfreePredicate = pkg:
     builtins.elem (lib.getName pkg) [
       "google-chrome"
+      "steam"
+      "steam-original"
+      "steam-unwrapped"
+      "steam-run"
     ];
 
   security.rtkit.enable = true;
