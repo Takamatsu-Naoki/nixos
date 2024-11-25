@@ -20,6 +20,7 @@
     git-lfs
     gh
     p7zip
+    unar
     nil
     dracula-theme
     adwaita-icon-theme
