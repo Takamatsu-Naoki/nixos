@@ -28,6 +28,7 @@
     dmenu-wayland
     kitty
     google-chrome
+    firefox
     thunderbird
     rclone
     jmtpfs
