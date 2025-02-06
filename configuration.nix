@@ -132,13 +132,14 @@
       noto-fonts-cjk-serif
       noto-fonts-cjk-sans
       noto-fonts-color-emoji
-      (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+      nerd-fonts.jetbrains-mono
     ] ++ ( with inputs.nixos-fonts.packages.x86_64-linux; [
       anzu-moji
       azukifont
       rii-tegaki-fude
       rii-tegaki-n
       coming-soon
+      logistra
     ]);
     fontconfig = {
       enable = true;
