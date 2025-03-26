@@ -47,11 +47,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1742989869,
+        "lastModified": 1742990663,
         "narHash": "sha256-zszklG8ZhmIkc+MBnx+vA3C3mXkHn9kyM7uxPzY8Za4=",
         "owner": "Takamatsu-Naoki",
         "repo": "lucky-roll",
-        "rev": "c58a43a053a7416f16b5ba5b62017d2fff031193",
+        "rev": "235b8d4cfadb75b68ca85880a104e8bd9fddc651",
         "type": "github"
       },
       "original": {

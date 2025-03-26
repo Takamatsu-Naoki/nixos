@@ -133,7 +133,7 @@
       noto-fonts-cjk-sans
       noto-fonts-color-emoji
       (nerdfonts.override { fonts = [ "JetBrainsMono" ];})
-    ] ++ ( with inputs.nixos-fonts.packages.x86_64-linux; [
+    ] ++ ( with inputs.nixos-fonts-pkgs; [
       anzu-moji
       azukifont
       rii-tegaki-fude

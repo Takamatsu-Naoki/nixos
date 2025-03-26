@@ -15,7 +15,11 @@
     nixosConfigurations = {
       "TallOaks" = nixpkgs.lib.nixosSystem rec {
         system = "x86_64-linux";
-        specialArgs.inputs = inputs;
+        specialArgs = {
+          inputs = {
+            nixos-fonts-pkgs = inputs.nixos-fonts.packages.${system};
+          };
+        };
         modules = [
           ./configuration.nix
           home-manager.nixosModules.home-manager
