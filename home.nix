@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }: {
+{ inputs, pkgs, lib, ... }: {
   home.username = "naoki";
   home.homeDirectory = "/home/naoki";
   home.stateVersion = "23.11";
@@ -39,7 +39,9 @@
     obs-studio
     angband
     ninvaders
-  ];
+  ] ++ (with inputs; [
+    lucky-roll-pkgs.default
+  ]);
 
   programs = {
     git = {
