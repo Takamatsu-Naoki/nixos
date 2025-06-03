@@ -39,6 +39,8 @@
     obs-studio
     angband
     ninvaders
+    android-studio
+    android-tools
   ] ++ (with inputs; [
     lucky-roll-pkgs.default
   ]);

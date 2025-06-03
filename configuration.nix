@@ -101,6 +101,7 @@
       "steam-original"
       "steam-unwrapped"
       "steam-run"
+      "android-studio-stable"
     ];
 
   security.rtkit.enable = true;
