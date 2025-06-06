@@ -94,16 +94,7 @@
       viAlias = true;
       extraLuaConfig = import ./neovim/configuration.nix;
       plugins = with pkgs.vimPlugins; [
-        (nvim-treesitter.withPlugins (p: with p; [
-          nix
-          rust
-          html
-          css
-          json
-          javascript
-          typescript
-          svelte
-        ]))
+        nvim-treesitter.withAllGrammars
         oil-nvim
         kanagawa-nvim
         none-ls-nvim

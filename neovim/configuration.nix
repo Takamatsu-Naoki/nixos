@@ -88,6 +88,7 @@ lspconfig.eslint.setup({
 lspconfig.svelte.setup({
   cmd = { "npx", "svelteserver", "--stdio" },
 })
+lspconfig.pyright.setup({})
 
 vim.api.nvim_create_autocmd('LspAttach', {
   desc = 'LSP actions',
