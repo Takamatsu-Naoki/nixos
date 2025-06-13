@@ -41,6 +41,7 @@
     ninvaders
     android-studio
     android-tools
+    linux-wifi-hotspot
   ] ++ (with inputs; [
     lucky-roll-pkgs.default
   ]);
