@@ -263,23 +263,24 @@
 
   services.mako = {
     enable = true;
-    backgroundColor = "#282a36";
-    textColor = "#f8f8f2";
-    borderColor = "#44475a";
-    font = "Noto Sans CJK JP";
-    extraConfig = ''
-      [urgency=low]
-      border-color=#282a36
-
-      [urgency=normal]
-      border-color=#44475a
-
-      [urgency=high]
-      border-color=#ff5555
-
-      [summary="Font problem"]
-      invisible=1
-    '';
+    settings = {
+      font = "Noto Sans CJK JP";
+      background-color = "#282a36";
+      text-color = "#f8f8f2";
+      border-color = "#44475a";
+      "urgency=low" = {
+        border-color = "#282a36";
+      };
+      "urgency=normal" = {
+        border-color = "#44475a";
+      };
+      "urgency=high" = {
+        border-color = "#ff5555";
+      };
+      "summary=\"Font problem\"" = {
+        invisible = 1;
+      };
+    };
   };
 
   services.mpd = {
@@ -294,7 +295,8 @@
   };
 
   i18n.inputMethod = {
-    enabled = "fcitx5";
+    enable = true;
+    type = "fcitx5";
     fcitx5.addons = with pkgs; [ fcitx5-skk ];
   };
 }

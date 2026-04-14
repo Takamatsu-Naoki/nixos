@@ -82,7 +82,6 @@
     fish = {
       enable = true;
     };
-
     steam = {
       enable = true;
     };
@@ -102,6 +101,7 @@
       "steam-unwrapped"
       "steam-run"
       "android-studio-stable"
+      "symbola"
     ];
 
   security.rtkit.enable = true;
@@ -133,7 +133,8 @@
       noto-fonts-cjk-serif
       noto-fonts-cjk-sans
       noto-fonts-color-emoji
-      (nerdfonts.override { fonts = [ "JetBrainsMono" ];})
+      symbola
+      nerd-fonts.jetbrains-mono
     ] ++ ( with inputs.nixos-fonts-pkgs; [
       anzu-moji
       azukifont
