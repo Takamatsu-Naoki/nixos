@@ -36,6 +36,7 @@
     vlc
     inkscape
     gimp
+    kdePackages.kdenlive
     obs-studio
     angband
     ninvaders
