@@ -50,9 +50,9 @@
   programs = {
     git = {
       enable = true;
-      userName = "Takamatsu Naoki";
-      userEmail = "Takamatsu0331@outlook.jp";
-      extraConfig = {
+      settings = {
+        user.name = "Takamatsu Naoki";
+        user.email = "Takamatsu0331@outlook.jp";
         init.defaultBranch = "main";
       };
     };
