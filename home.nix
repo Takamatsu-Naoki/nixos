@@ -224,8 +224,8 @@
         "XF86AudioMute" = "exec ${pkgs.pamixer}/bin/pamixer -t";
         "XF86AudioRaiseVolume" = "exec ${pkgs.pamixer}/bin/pamixer -i 5";
         "XF86AudioLowerVolume" = "exec ${pkgs.pamixer}/bin/pamixer -d 5";
-        "XF86MonBrightnessUp" = "exec ${pkgs.brightnessctl}/bin/brightnessctl set 10%+";
-        "XF86MonBrightnessDown" = "exec ${pkgs.brightnessctl}/bin/brightnessctl set 10%-";
+        "Mod4+bracketright" = "exec ${pkgs.brightnessctl}/bin/brightnessctl set 10%+";
+        "Mod4+bracketleft" = "exec ${pkgs.brightnessctl}/bin/brightnessctl set 10%-";
       };
       bars = [{
         command = "${pkgs.waybar}/bin/waybar";
