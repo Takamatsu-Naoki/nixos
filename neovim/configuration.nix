@@ -72,20 +72,29 @@ null_ls.setup({
 keymap('n', '<leader>f', function() vim.lsp.buf.format { async = true } end)
 
 vim.lsp.enable('nil_ls')
+
 vim.lsp.config('rust_analyzer', {
   settings = {
     ['rust-analyzer'] = {},
   },
 })
+vim.lsp.enable('rust-analyzer')
+
 vim.lsp.config('ts_ls', {
   cmd = { "npx", "typescript-language-server", "--stdio" },
 })
+vim.lsp.enable('ts_ls')
+
 vim.lsp.config('eslint', {
   cmd = { "npx", "vscode-eslint-language-server", "--stdio" },
 })
+vim.lsp.enable('eslint')
+
 vim.lsp.config('svelte', {
   cmd = { "npx", "svelteserver", "--stdio" },
 })
+vim.lsp.enable('svelte')
+
 vim.lsp.enable('pyright')
 
 vim.api.nvim_create_autocmd('LspAttach', {
