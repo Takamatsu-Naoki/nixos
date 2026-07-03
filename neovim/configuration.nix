@@ -90,6 +90,21 @@ vim.lsp.config('eslint', {
 })
 vim.lsp.enable('eslint')
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+vim.lsp.config('html', {
+  cmd = { "npx", "vscode-html-language-server", "--stdio"},
+  capabilities = capabilities,
+})
+vim.lsp.enable('html')
+
+vim.lsp.config('cssls', {
+  cmd = { "npx", "vscode-css-language-server", "--stdio"},
+  capabilities = capabilities,
+})
+vim.lsp.enable('cssls')
+
 vim.lsp.config('svelte', {
   cmd = { "npx", "svelteserver", "--stdio" },
 })
