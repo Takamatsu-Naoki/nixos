@@ -9,6 +9,7 @@ local options = {
   title = true,
   number = true,
   splitright = true,
+  splitbelow = true,
   showmatch = true,
   ignorecase = true,
   smartcase = true,
