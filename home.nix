@@ -36,10 +36,7 @@
     vlc
     inkscape
     gimp
-    kdePackages.kdenlive
     obs-studio
-    angband
-    ninvaders
     android-studio
     android-tools
     linux-wifi-hotspot
@@ -181,10 +178,6 @@
       }];
       style = import ./waybar/style.nix;
     };
-
-    ncmpcpp = {
-      enable = true;
-    };
   };
 
   wayland.windowManager.sway = {
@@ -282,17 +275,6 @@
         invisible = 1;
       };
     };
-  };
-
-  services.mpd = {
-    enable = true;
-    musicDirectory = "/home/naoki/music";
-    extraConfig = ''
-      audio_output {
-        type "pipewire"
-        name "My PipeWire Output"
-      }
-    '';
   };
 
   i18n.inputMethod = {
